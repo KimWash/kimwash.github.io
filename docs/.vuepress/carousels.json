@@ -1,0 +1,12 @@
+[
+  {
+    "text": "교내 매점 온라인 결제 시스템, H4Pay",
+    "color": "info",
+    "image": "",
+    "link": ""
+  },
+  { "text": "Slide 2", "color": "info", "image": "", "link": "" },
+  { "text": "Slide 3", "color": "success", "image": "", "link": "" },
+  { "text": "Slide 4", "color": "warning", "image": "", "link": "" },
+  { "text": "Slide 5", "color": "danger", "image": "", "link": "" }
+]
