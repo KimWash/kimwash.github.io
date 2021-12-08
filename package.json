@@ -10,5 +10,8 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "buefy": "^0.9.8"
   },
-  "main": "layouts/Layout.vue"
+  "main": "layouts/Layout.vue",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
 }
