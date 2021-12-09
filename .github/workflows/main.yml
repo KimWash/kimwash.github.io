@@ -19,6 +19,8 @@ jobs:
         TOKEN: ${{ secrets.TOKEN }}
       run: |
         cd docs/.vuepress/dist
+        git config --global user.email "ckm0728wash@gmail.com"
+        git config --global user.name "KimWash"
         git init
         git add -A
         git commit -m "deploy"
