@@ -1,7 +1,7 @@
 const path = require("path")
 
 module.exports = {
-  base: "/",
+  base: "/kimwash.github.io/",
   title: 'kimwash.github.io',
   description: 'Awesome description',
   markdown: {
