@@ -15,16 +15,12 @@
         앱/웹 개발자입니다!
       </p>
       <p>
-        <a href="mailto:ckm0728wash@gmail.com">
-          <Tag label="Email" type="primary" />
-          ckm0728wash@gmail.com
-        </a>
+        <Tag label="Email" type="primary" />
+        <a href="mailto:ckm0728wash@gmail.com"> ckm0728wash@gmail.com </a>
       </p>
       <p>
-        <a href="https://github.com/KimWash">
-          <Tag label="Github" type="primary" />
-          https://github.com/KimWash
-        </a>
+        <Tag label="Github" type="primary" />
+        <a href="https://github.com/KimWash"> https://github.com/KimWash </a>
       </p>
     </div>
   </div>
