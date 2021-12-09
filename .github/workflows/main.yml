@@ -24,4 +24,4 @@ jobs:
         git init
         git add -A
         git commit -m "deploy"
-        https://${TOKEN}@github.com/kimwash.github.io.git master:gh-pages
+        https://${TOKEN}@github.com/KimWash/kimwash.github.io.git master:gh-pages
