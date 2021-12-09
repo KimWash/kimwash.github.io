@@ -1,11 +1,7 @@
 <template>
   <b-navbar>
     <template #brand>
-      <b-navbar-item
-        tag="router-link"
-        to="/"
-        style="font-weight: bold; color: black"
-      >
+      <b-navbar-item href="/" style="font-weight: bold; color: black">
         Wh@t !s Development?
       </b-navbar-item>
     </template>
