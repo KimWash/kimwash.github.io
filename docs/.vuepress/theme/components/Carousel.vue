@@ -1,5 +1,5 @@
 <template>
-  <b-carousel>
+  <b-carousel class="carousel">
     <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
       <section
         :class="`hero is-medium is-${carousel.color}`"
@@ -22,3 +22,10 @@ export default {
   },
 };
 </script>
+<style>
+@media screen and (min-width:1024px) {
+  .carousel {
+    width:100vw;
+  }
+}
+</style>

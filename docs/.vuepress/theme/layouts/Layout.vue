@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <div class="navbar">
+    <div id="navbar">
       <Navbar />
     </div>
     <div class="content">
@@ -40,6 +40,12 @@ export default {
     Post,
     About
   },
+  created() {
+    if (process.env.NODE_ENV == 'development') {
+      console.log("Welcome to vuepress. it's been a long time! $site is like below!\n")
+      console.log(this)
+    }
+  }
 };
 </script>
 
@@ -47,5 +53,11 @@ export default {
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 * {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+@media screen and (min-width:1024px) {
+  #navbar {
+    padding:0 10vw;
+    width:100vw
+  }
 }
 </style>
