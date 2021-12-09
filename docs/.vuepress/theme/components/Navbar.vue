@@ -9,22 +9,21 @@
         Wh@t !s Development?
       </b-navbar-item>
     </template>
-    <template #start>
-      <b-navbar-item
+
+
+    <template #end>
+            <b-navbar-item
         v-for="item in navigations"
         :href="item.route"
         :key="item.text"
       >
         {{ item.text }}
       </b-navbar-item>
-    </template>
-
-    <template #end>
       <b-navbar-item tag="div">
         <div class="buttons">
-          <b-button type="is-info" icon-right="github" icon-pack="fab" />
-          <b-button type="is-info" icon-right="instagram" icon-pack="fab"/>
-          <b-button type="is-info" icon-right="facebook" icon-pack="fab"/>
+          <b-button type="is-info" icon-right="github" icon-pack="fab" @click="openThirdLink('https://github.com/KimWash/')"/>
+          <b-button type="is-info" icon-right="instagram" icon-pack="fab" @click="openThirdLink('https://instagram.com/kimwash.jem/')"/>
+        
         </div>
       </b-navbar-item>
     </template>
@@ -41,5 +40,10 @@ export default {
   created() {
     console.log(this.navigations);
   },
+  methods: {
+    openThirdLink(url) {
+      location.href = url
+    }
+  }
 };
 </script>
