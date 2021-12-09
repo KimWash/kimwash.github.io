@@ -1,14 +1,25 @@
-# abort on errors
-set -e
+name: vuepress deploy
 
-npm run docs:build
+on:
+  push:
+    branches: [ master ]
 
-cd docs/.vuepress/dist
-
-git init
-git add -A
-git commit -m 'deploy'
-
-git push -f https://${{secrets.TOKEN}}@github.com/kimwash.github.io.git master:gh-pages
-
-cd -
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: Install and build
+      run: |
+        npm install
+        npm run docs:build
+    - name: Deploy built filed
+      env: 
+        TOKEN: ${{ secrets.TOKEN }}
+      run: |
+        cd docs/.vuepress/dist
+        git init
+        git add -A
+        git commit -m "deploy"
+        https://${TOKEN}@github.com/kimwash.github.io.git master:gh-pages
