@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <Carousel/>
+    <Carousel />
     <div class="tiles">
       <div
         class="tile is-ancestor is-10"
-        style="margin: 0 auto; width:100%"
+        style="margin: 0 auto; width: 100%"
         v-for="i in posts.rows"
         :key="i"
       >
         <div class="tile is-parent" v-for="j in 3" :key="j">
           <article
-           @click="$router.push(posts.posts[j + 3 * (i - 1) - 1].path)"
+            @click="$router.push(posts.posts[j + 3 * (i - 1) - 1].path)"
             class="tile is-child box"
             v-if="j + 3 * (i - 1) - 1 < posts.posts.length"
           >
@@ -26,20 +26,21 @@
         </div>
       </div>
     </div>
-    <div class="nopost">아무런 글도 없는 것 같네요.</div>
+    <div class="nopost" v-if="posts.rows.length == 0">
+      아무런 글도 없는 것 같네요.
+    </div>
   </div>
 </template>
 
 <script>
-import Carousel from './Carousel'
+import Carousel from "./Carousel";
 export default {
   components: {
-    Carousel
+    Carousel,
   },
   data() {
     return {
       page: 0,
-
     };
   },
   computed: {
@@ -72,14 +73,14 @@ export default {
 .title {
   font-size: 1.7rem;
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .tiles {
     margin: 2vw 0;
-    padding:0 10vw;
+    padding: 0 10vw;
   }
 }
 .nopost {
-  display:flex;
+  display: flex;
   justify-content: center;
   margin-top: 10vh;
   font-size: 2rem;
