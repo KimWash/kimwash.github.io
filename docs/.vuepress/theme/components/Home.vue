@@ -10,7 +10,7 @@
       >
         <div class="tile is-parent" v-for="j in 3" :key="j">
           <article
-            @click="$router.push(posts.posts[j + 3 * (i - 1) - 1].relativePath)"
+            @click="$router.push(posts.posts[j + 3 * (i - 1) - 1].path)"
             class="tile is-child box"
             v-if="j + 3 * (i - 1) - 1 < posts.posts.length"
           >
