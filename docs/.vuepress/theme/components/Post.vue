@@ -43,4 +43,13 @@ export default {
 .comment {
   margin-top: 20vh;
 }
+.label {
+  display: inline;
+}
+code {
+  font-family: "Spoqa Han Sans Neo";
+}
+.number {
+  all: unset;
+}
 </style>
