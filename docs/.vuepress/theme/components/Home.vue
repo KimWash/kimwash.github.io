@@ -10,7 +10,7 @@
       >
         <div class="tile is-parent" v-for="j in 3" :key="j">
           <article
-            @click="$router.push(posts.posts[j + 3 * (i - 1) - 1].path)"
+            @click="$router.push(posts.posts[j + 3 * (i - 1) - 1].relativePath)"
             class="tile is-child box"
             v-if="j + 3 * (i - 1) - 1 < posts.posts.length"
           >
@@ -53,6 +53,7 @@ export default {
         .sort((a, b) => {
           return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
         });
+      console.log(posts);
       return {
         posts: posts,
         rows: Math.ceil(posts.length / 3),
