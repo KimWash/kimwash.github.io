@@ -14,7 +14,7 @@ Flutter로 앱 개발을 진행하고, Vue로 대시보드 개발을 진행하�
 사실 굉장히 초짜스러운 것이긴 하다. 하지만 모든 데이터에 Type Check가 들어가고 VSC에서 설명도 자세하게 뜨는 Flutter와 다르게 JS는 그렇지 못한 부분이 있어서.. 라고 변명해보지만 결국 내 숙련이 부족한 탓이다.
 
 핵심은 이것이다.
-> Date.parse('ISODateString') => milisecondsSinceEpoch
+> Date.parse('ISODateString') => millisecondsSinceEpoch
 > new Date('ISODateString') => DateObject
 
 다음번엔 꼭 이런 짓을 안하기 위해서 적어본다..
