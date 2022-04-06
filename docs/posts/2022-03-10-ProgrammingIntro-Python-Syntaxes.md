@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:  "프로그래밍입문 - 헐 이게 왜 되지? : 치환"
-category:  H4Pay
+category:  ProgrammingIntroduction
 date:  "2022-03-10"
 ---
 
