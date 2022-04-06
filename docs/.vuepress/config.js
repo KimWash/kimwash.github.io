@@ -9,6 +9,9 @@ module.exports = {
     },
     lineNumbers:true
   },
+  plugins:[
+    'latex'
+  ],
   configureWebpack: {
     resolve: {
       alias: {
