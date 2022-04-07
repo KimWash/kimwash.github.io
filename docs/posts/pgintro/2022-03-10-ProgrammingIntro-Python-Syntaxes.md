@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:  "프로그래밍입문 - 헐 이게 왜 되지? : 치환"
-category:  ProgrammingIntroduction
+category:  프로그래밍입문
 date:  "2022-03-10"
 ---
 

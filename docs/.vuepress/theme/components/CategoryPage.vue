@@ -1,24 +1,16 @@
 <template>
-  <div class="home">
-    <Carousel />
+  <div class="categorypage">
+    <p class="title">{{ $frontmatter.title }} 게시글</p>
     <post-view :posts="posts" />
   </div>
 </template>
 
 <script>
-import Carousel from "./Carousel";
-import PostCard from "./PostCard.vue";
 import PostView from "./PostView.vue";
 export default {
-  components: {
-    Carousel,
-    PostCard,
-    PostView,
-  },
-  data() {
-    return {
-      page: 0,
-    };
+  components: { PostView },
+  created() {
+    console.log(this.$frontmatter);
   },
   computed: {
     posts() {
@@ -40,9 +32,13 @@ export default {
   },
 };
 </script>
-
-<style>
+<style scoped>
+@media screen and (min-width: 1024px) {
+  .title {
+    padding: 0 10vw !important;
+  }
+}
 .title {
-  font-size: 1.7rem;
+  padding: 0 10px;
 }
 </style>

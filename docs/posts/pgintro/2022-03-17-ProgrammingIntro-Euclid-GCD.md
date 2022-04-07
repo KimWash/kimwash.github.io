@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "프로그래밍입문 - 유클리드 호제법을 이용한 최대공약수 구하기"
-category: ProgrammingIntroduction
+category: 프로그래밍입문
 date: "2022-03-17"
 ---
 

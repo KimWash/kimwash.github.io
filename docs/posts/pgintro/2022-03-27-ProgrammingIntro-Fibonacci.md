@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "프로그래밍입문 - 피보나치 수열"
-category: ProgrammingIntroduction
+category: 프로그래밍입문
 date: "2022-03-27"
 ---
 

@@ -32,20 +32,24 @@ import Navbar from "../components/Navbar.vue";
 import Home from "../components/Home.vue";
 import Post from "../components/Post.vue";
 import About from "../components/About.vue";
+import CategoryPage from "../components/CategoryPage.vue";
 
 export default {
   components: {
     Navbar,
     Home,
     Post,
-    About
+    About,
+    CategoryPage,
   },
   created() {
-    if (process.env.NODE_ENV == 'development') {
-      console.log("Welcome to vuepress. it's been a long time! $site is like below!\n")
-      console.log(this)
+    if (process.env.NODE_ENV == "development") {
+      console.log(
+        "Welcome to vuepress. it's been a long time! $site is like below!\n"
+      );
+      console.log(this);
     }
-  }
+  },
 };
 </script>
 
@@ -54,10 +58,10 @@ export default {
 * {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   #navbar {
-    padding:0 10vw;
-    width:100vw
+    padding: 0 10vw;
+    width: 100vw;
   }
 }
 </style>

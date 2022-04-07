@@ -13,6 +13,13 @@
       >
         {{ item.text }}
       </b-navbar-item>
+      <b-navbar-item
+        v-for="item in categories"
+        :href="`/posts/${item.id}`"
+        :key="item.name"
+      >
+        {{ item.name }}
+      </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons">
           <b-button
@@ -34,10 +41,12 @@
 </template>
 <script>
 import navigations from "../../navigations.json";
+import categories from "../../categories.json";
 export default {
   data() {
     return {
       navigations: navigations,
+      categories: categories,
     };
   },
   created() {
