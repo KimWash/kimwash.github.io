@@ -9,9 +9,7 @@
 import PostView from "./PostView.vue";
 export default {
   components: { PostView },
-  created() {
-    console.log(this.$frontmatter);
-  },
+
   computed: {
     posts() {
       let currentPage = this.page ? this.page : this.$page.path;
@@ -22,7 +20,6 @@ export default {
         .sort((a, b) => {
           return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
         });
-      console.log(posts);
       return {
         posts: posts,
         rows: Math.ceil(posts.length / 3),

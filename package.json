@@ -14,6 +14,6 @@
   },
   "main": "layouts/Layout.vue",
   "devDependencies": {
-    "vuepress": "^1.8.2"
+    "vuepress": "^1.9.7"
   }
 }

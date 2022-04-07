@@ -18,11 +18,14 @@
           </post-card>
         </div>
       </div>
-      <infinite-loading
-        v-if="hasMore"
-        :identifier="infiniteId"
-        @infinite="onScroll"
-      ></infinite-loading>
+      <ClientOnly>
+        <component
+          v-if="infinityLoadingComponent && hasMore"
+          :is="infinityLoadingComponent"
+          :identifier="infiniteId"
+          @infinite="onScroll"
+        ></component>
+      </ClientOnly>
     </div>
     <div class="nopost" v-if="Math.ceil(posts.length / 3) == 0">
       아무런 글도 없는 것 같네요.
@@ -30,13 +33,9 @@
   </div>
 </template>
 <script>
-import InfiniteLoading from "vue-infinite-loading";
 import PostCard from "./PostCard.vue";
 export default {
-  created() {
-    console.log(this.posts);
-  },
-  components: { PostCard, InfiniteLoading },
+  components: { PostCard },
   props: {
     posts: {
       type: Object,
@@ -49,17 +48,19 @@ export default {
       hasMore: this.posts.posts.length > 0 ? true : false,
       infiniteId: +new Date(),
       page: this.$route.query.page,
+      infinityLoadingComponent: null,
     };
   },
-  created() {
+
+  mounted() {
+    import("vue-infinite-loading").then((module) => {
+      this.infinityLoadingComponent = module.default;
+    });
     if (this.$route.query.page == undefined) {
       this.$router.push({ query: { page: 1 } });
       this.page = 1;
     }
-    console.log(10 * (this.page - 1), 10 * this.page);
     this.data = this.posts.posts.slice(10 * (this.page - 1), 10 * this.page);
-
-    console.log(`data: ${this.data}`);
   },
   methods: {
     onScroll($state) {
@@ -70,15 +71,10 @@ export default {
           10 * this.page
         );
 
-        console.log(newDatas);
         this.data = [...this.data, ...newDatas];
-        console.log(10 * this.page, 10 * (this.page - 1));
-        console.log(10 * this.page, this.posts.posts.length);
         if (10 * this.page > this.posts.posts.length) {
           this.hasMore = false;
         }
-
-        console.log(`data: `, this.data);
       }
     },
   },

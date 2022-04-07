@@ -18,9 +18,6 @@ export default {
   components: {
     Disqus,
   },
-  created() {
-    console.log(this.$page);
-  },
 };
 </script>
 <style>
