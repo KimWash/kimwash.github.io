@@ -34,7 +34,7 @@ meta:
 <table>
   <tr>
     <td>
-      <img style="border-radius:20px;" src="../images/h4pay.png" width="100">
+      <img style="border-radius:20px;" src="../images/h4pay.png" width="300px">
     </td>
     <td>
       <Project name="H4Pay" period="2020.10 ~ now (Maintaining)" content="고등학교 교내 매점의 결제 및 수령을 온라인으로 처리하기 위한 프로젝트입니다. 사용자가 앱에서 제품을 구매하면 해당 제품의 바코드를 매점의 태블릿에서 스캔해 교환할 수 있는 시스템을 개발했습니다.<p>사용 기술: Vue.js, Flutter, Kotlin</p><a herf='https://cozyllc.co.kr/product/h4pay'>서비스 소개</a>"/>
