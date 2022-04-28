@@ -8,5 +8,10 @@
     "id": "pgintro",
     "name": "프로그래밍입문",
     "type": "class"
+  },
+  {
+    "id": "problems",
+    "name": "알고리즘 문제",
+    "type": "personal"
   }
 ]
