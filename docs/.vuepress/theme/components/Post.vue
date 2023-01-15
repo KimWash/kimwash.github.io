@@ -26,7 +26,7 @@ export default {
 }
 @media screen and (min-width: 1024px) {
   .post {
-    padding: 0 10vw;
+    padding: 0 18vw;
   }
 }
 @media screen and (max-width: 1023px) {

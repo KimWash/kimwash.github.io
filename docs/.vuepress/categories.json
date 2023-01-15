@@ -13,5 +13,10 @@
     "id": "problems",
     "name": "알고리즘 문제",
     "type": "personal"
+  },
+  {
+    "id": "etc",
+    "name": "그 외",
+    "type": "personal"
   }
 ]
