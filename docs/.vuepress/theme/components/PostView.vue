@@ -62,14 +62,6 @@ export default {
     }
     this.data = this.posts.posts.slice(10 * (this.page - 1), 10 * this.page);
   },
-  created() {
-    const cards = document.querySelectorAll("tile is-child box");
-
-    for (let card of cards) {
-      card.style.background =
-        "linear-gradient(45deg, #327ae7 0%, #6bd0ff 100%)";
-    }
-  },
   methods: {
     onScroll($state) {
       if (this.hasMore) {
