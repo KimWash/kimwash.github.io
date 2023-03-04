@@ -3,7 +3,7 @@
     <div class="img">
       <img
         class="img-round"
-        src="../../images/profile.gif"
+        src="../../images/profile2.jpeg"
         width="200"
         height="200"
       />
@@ -13,6 +13,10 @@
       <p>
         Flutter와 Vue.js를 좋아하고 express도 할 줄 아는, 풀스택을 지향하는
         앱/웹 개발자입니다!
+      </p>
+      <p>
+        <Tag label="Organization" type="primary" />
+        Incheon National University Sophomore
       </p>
       <p>
         <Tag label="Email" type="primary" />

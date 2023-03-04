@@ -32,7 +32,7 @@
             type="is-info"
             icon-right="instagram"
             icon-pack="fab"
-            @click="openThirdLink('https://instagram.com/kimwash.jem/')"
+            @click="openThirdLink('https://instagram.com/03_gangm/')"
           />
         </div>
       </b-navbar-item>
