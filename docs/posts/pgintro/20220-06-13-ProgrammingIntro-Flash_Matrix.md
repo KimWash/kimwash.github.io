@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "프로그래밍입문 벼락치기 - 행렬"
-category: 프로그래밍입문
+title: "CS 벼락치기 - 행렬"
+category: CS
 date: "2022-06-13"
 ---
 
@@ -15,7 +15,7 @@ $A = \begin{bmatrix}
 A = [[1,0,0],[0,1,0], [0,0,1]]로 표현된다. 일차원이 행, 이차원이 행에 딸린 열을 표현하는 용이라고 생각하자.
 
 ### 상위/하위 삼각행렬의 합
-말 그대로 주대각선을 기준으로 위에 있는, 그리고 아래에 있는 원소들을 모아놓은 삼각행렬이다. 프로그래밍입문에선 이들 원소들의 합을 구하는 것을 다룬다. 아래 그림에서 색칠된 부분 중 위 부분이 상위삼각, 아래 부분이 하위삼각행렬이다. 인덱스를 써놨는데, 상위삼각은 $i<j$인 원소들이고, 하위삼각은 $i>j$인 원소들이다. 이 조건을 걸어서 부합하는 원소들을 모두 더해주면 되는 간단한 로직이다.
+말 그대로 주대각선을 기준으로 위에 있는, 그리고 아래에 있는 원소들을 모아놓은 삼각행렬이다. CS에선 이들 원소들의 합을 구하는 것을 다룬다. 아래 그림에서 색칠된 부분 중 위 부분이 상위삼각, 아래 부분이 하위삼각행렬이다. 인덱스를 써놨는데, 상위삼각은 $i<j$인 원소들이고, 하위삼각은 $i>j$인 원소들이다. 이 조건을 걸어서 부합하는 원소들을 모두 더해주면 되는 간단한 로직이다.
 
 <img src="https://lh3.googleusercontent.com/pw/AM-JKLX4ZOU9dCTmfnWYEBadbL1BdKWQ8FT_eiL1YSTRRMVLawCaAMcWkdf2BTjkSQq9SM5j51M8oWctIsdZziOmWfwX9y9obayl0VTsE0MA7iCwvpWn1VegzcpHJYawVHIPmRSxNH3P8PgDKK2tBsaHSXqxwQ=w531-h504-no?authuser=0" alt="상/하위 삼각행렬 설명 이미지" width=200>
 

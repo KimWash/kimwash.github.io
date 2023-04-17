@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "프로그래밍입문 - 버블정렬로 n개의 수 정렬하기"
-category: 프로그래밍입문
+title: "CS - 버블정렬로 n개의 수 정렬하기"
+category: CS
 date: "2022-04-16"
 ---
 

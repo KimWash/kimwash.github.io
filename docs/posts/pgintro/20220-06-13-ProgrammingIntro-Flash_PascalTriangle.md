@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "프로그래밍입문 벼락치기 - 파스칼의 삼각형"
-category: 프로그래밍입문
+title: "CS 벼락치기 - 파스칼의 삼각형"
+category: CS
 date: "2022-06-13"
 ---
 

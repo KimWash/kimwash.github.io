@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "프로그래밍입문 - 에라토스테네스의 체"
-category: 프로그래밍입문
+title: "CS - 에라토스테네스의 체"
+category: CS
 date: "2022-04-06"
 ---
 

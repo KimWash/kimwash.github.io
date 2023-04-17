@@ -1,6 +1,6 @@
 ---
 layout: CategoryPage
-title: 프로그래밍입문
+title: CS
 categoryId: pgintro
 ---
 
