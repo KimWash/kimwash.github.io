@@ -54,9 +54,11 @@ int is_full(LinkedQueueType *q) {
 ```c
 void enqueue(LinkedQueueType *q, element data) {
   QueueNode *temp = (QueueNode*) malloc(sizeof(QueueNode));
+  temp->data = data;
+  temp->link = NULL;
   if (is_empty(q) {
-    temp->data = data;
-    temp->link = NULL;
+    q->rear = temp;
+    q->front = temp;
   }
   else {
     q->rear->link = temp;
