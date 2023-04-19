@@ -11,7 +11,7 @@ date: "2023-04-19"
 ### Linear Queue의 단점
 Linear Queue의 경우에는 1차원 배열로 구현한 경우에 새로운 요소를 rear를 shifting 하면서 삽입하기 때문에 삽입 가능한 최대 크기까지 삽입하면 삭제한 요소들을 인덱스 0부터 시작하게 shift 해줘야한다.
 
-
+<img src="@image/2023-04-19/lin_queue.gif">
 
 ### Circular Queue
 이러한 단점을 보완하고자 Queue를 원형으로 만들었다. 원형으로 만들었기 때문에 기존에 선형으로 만들었을 때 생기는 문제를 해결할 수 있었다.
