@@ -25,7 +25,7 @@ Linear Queue의 경우에는 1차원 배열로 구현한 경우에 새로운 요
 - 포화상태는 `front % SIZE == (rear + 1) % SIZE` 으로 정의된다. 
   - (rear + 1) % SIZE 를 이용해 맨 뒤 요소의 바로 다음 요소가 front와 일치하는지 확인하므로, `(front - 1) % SIZE == rear % SIZE` 도 동작할 것이다. 
   - 이런 방식으로 인덱스를 달리해서 문제가 출제되기 좋다.
-- Queue를 Initialize 할 때 `q->front = q->rear`를 0이 아닌 1로 주면 `SIZE - 1` 만큼의 가용한 공간을 갖게 된다.
+- Queue를 Initialize 할 때 `q->front = q->rear`를 0이 아닌 1로 줘도 `SIZE - 1` 만큼의 가용한 공간을 갖게 된다.
 ```C
 #define SIZE = 5;
 
