@@ -33,6 +33,7 @@ import Home from "../components/Home.vue";
 import Post from "../components/Post.vue";
 import About from "../components/About.vue";
 import CategoryPage from "../components/CategoryPage.vue";
+import Draft from "../components/Draft.vue";
 
 export default {
   components: {
@@ -41,6 +42,7 @@ export default {
     Post,
     About,
     CategoryPage,
+    Draft,
   },
   created() {
     if (process.env.NODE_ENV == "development") {
@@ -56,7 +58,7 @@ export default {
 <style>
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 * {
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-family: "Spoqa Han Sans Neo", "sans-serif" !important;
 }
 @media screen and (min-width: 1024px) {
   #navbar {

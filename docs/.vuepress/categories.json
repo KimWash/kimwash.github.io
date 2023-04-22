@@ -18,5 +18,11 @@
     "id": "etc",
     "name": "그 외",
     "type": "personal"
+  },
+  {
+    "id": "draft",
+    "name": "노션에서 글 미리보기",
+    "type": "link",
+    "value": "https://kimwash.notion.site/40487aa4fb564b389b0d455c5aec1efa"
   }
 ]

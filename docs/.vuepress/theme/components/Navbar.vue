@@ -15,7 +15,7 @@
       </b-navbar-item>
       <b-navbar-item
         v-for="item in categories"
-        :href="`/posts/${item.id}`"
+        :href="item.type == 'link' ? item.value : `/posts/${item.id}`"
         :key="item.name"
       >
         {{ item.name }}
