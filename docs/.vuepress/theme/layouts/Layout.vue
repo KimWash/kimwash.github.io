@@ -33,7 +33,6 @@ import Home from "../components/Home.vue";
 import Post from "../components/Post.vue";
 import About from "../components/About.vue";
 import CategoryPage from "../components/CategoryPage.vue";
-import Draft from "../components/Draft.vue";
 
 export default {
   components: {
@@ -42,7 +41,6 @@ export default {
     Post,
     About,
     CategoryPage,
-    Draft,
   },
   created() {
     if (process.env.NODE_ENV == "development") {

@@ -34,6 +34,18 @@
             icon-pack="fab"
             @click="openThirdLink('https://instagram.com/03_gangm/')"
           />
+          <b-button
+            type="is-info"
+            @click="
+              openThirdLink(
+                'https://kimwash.notion.site/40487aa4fb564b389b0d455c5aec1efa'
+              )
+            "
+          >
+            <span class="icon is-small">
+              <img src="/images/white_notion.svg" width="15" height="15" />
+            </span>
+          </b-button>
         </div>
       </b-navbar-item>
     </template>
