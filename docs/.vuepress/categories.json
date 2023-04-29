@@ -5,6 +5,11 @@
     "type": "project"
   },
   {
+    "id": "android",
+    "name":"Android",
+    "type": "personal"
+  },
+  {
     "id": "pgintro",
     "name": "CS",
     "type": "class"
