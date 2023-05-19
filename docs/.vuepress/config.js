@@ -4,13 +4,14 @@ module.exports = {
   title: 'Wh@t !s Development?',
   description: '배워가고 있는 현업..? 대학생 개발자',
   markdown: {
-    anchor:{
+    anchor: {
       permalink: false, permalinkBefore: false, permalinkSymbol: ''
     },
-    lineNumbers:true
+    lineNumbers: true
   },
-  plugins:[
-    'latex'
+  plugins: [
+    'latex',
+    ["sitemap", { hostname: "https://blog.kimwash.xyz/" }]
   ],
   configureWebpack: {
     resolve: {
