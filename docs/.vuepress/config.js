@@ -9,6 +9,16 @@ module.exports = {
     },
     lineNumbers: true
   },
+  head: [
+    [
+      "script",
+      {
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=G-C7NTCRQ25E",
+      },
+    ],
+    ["script", {}, ["window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-C7NTCRQ25E');"]],
+  ],
   plugins: [
     'latex',
     ["sitemap", { hostname: "https://blog.kimwash.xyz/" }]
