@@ -2,7 +2,7 @@
 layout: post
 title: "데이터베이스: SQL 고급"
 category: CS
-date: "2023-06-11"
+date: "2023-06-11 00:07:00"
 ---
 
 ## 숫자

@@ -2,7 +2,7 @@
 layout: post
 title: "데이터베이스: 키"
 category: CS
-date: "2023-06-11"
+date: "2023-06-11 00:02:00"
 ---
 
 ### 특성
