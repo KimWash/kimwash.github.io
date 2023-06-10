@@ -60,12 +60,13 @@ export default {
       this.$router.push({ query: { page: 1 } });
       this.page = 1;
     }
-    this.data = this.posts.posts.slice(10 * (this.page - 1), 10 * this.page);
+    this.data = this.posts.posts.slice(0, 10 * this.page);
   },
   methods: {
     onScroll($state) {
       if (this.hasMore) {
         this.page++;
+        this.$router.push({ query: { page: this.page } });
         const newDatas = this.posts.posts.slice(
           10 * (this.page - 1),
           10 * this.page
@@ -73,8 +74,10 @@ export default {
 
         this.data = [...this.data, ...newDatas];
         if (10 * this.page > this.posts.posts.length) {
+          $state.complete();
           this.hasMore = false;
         }
+        $state.loaded();
       }
     },
   },
