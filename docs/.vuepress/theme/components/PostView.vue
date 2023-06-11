@@ -51,7 +51,6 @@ export default {
       infinityLoadingComponent: null,
     };
   },
-
   mounted() {
     import("vue-infinite-loading").then((module) => {
       this.infinityLoadingComponent = module.default;
@@ -66,7 +65,7 @@ export default {
     onScroll($state) {
       if (this.hasMore) {
         this.page++;
-        this.$router.push({ query: { page: this.page } });
+        history.pushState({}, null, this.$route.path + "?page=" + this.page);
         const newDatas = this.posts.posts.slice(
           10 * (this.page - 1),
           10 * this.page
