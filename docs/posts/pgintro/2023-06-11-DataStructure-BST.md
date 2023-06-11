@@ -36,7 +36,7 @@ date: "2023-06-11 16:58:30"
     
 - 삽입
     - 먼저 삽입할 곳(탐색을 실패하는 위치)을 탐색해야함
-    
+    ![BST_Insert](@image/2023-06-11/bst_insert.gif)
     ```c
     TreeNode *insert_node(TreeNode *node, int key) {
     	if (node == NULL) return new_node(key); // NULL을 발견하면 그 자리를 new_node로 지정
