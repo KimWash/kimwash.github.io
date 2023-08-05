@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 2
     - name: Install and build
       run: |
         npm install
