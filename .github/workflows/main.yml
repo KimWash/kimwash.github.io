@@ -1,8 +1,8 @@
 name: Build and Deploy
 on: [push]
 env:
-  INSTARGRAM_USERNAME: ${{ secrets.INSTARGRAM_USERNAME }}
-  INSTARGRAM_PASSWORD: ${{ secrets.INSTARGRAM_PASSWORD }}
+  INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+  INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
   REPO_PATH: ${{ secrets.REPO_PATH }}
   GITHUB_USERNAME: ${{ secrets.GH_USERNAME }}
   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
