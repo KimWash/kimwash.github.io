@@ -3,7 +3,7 @@
     <div class="img">
       <img
         class="img-round"
-        src="../../images/profile.gif"
+        src="../../images/profile2.jpeg"
         width="200"
         height="200"
       />
@@ -15,16 +15,16 @@
         앱/웹 개발자입니다!
       </p>
       <p>
-        <a href="mailto:ckm0728wash@gmail.com">
-          <Tag label="Email" type="primary" />
-          ckm0728wash@gmail.com
-        </a>
+        <Tag label="Organization" type="primary" />
+        Incheon National University Sophomore
       </p>
       <p>
-        <a href="https://github.com/KimWash">
-          <Tag label="Github" type="primary" />
-          https://github.com/KimWash
-        </a>
+        <Tag label="Email" type="primary" />
+        <a href="mailto:ckm0728wash@gmail.com"> ckm0728wash@gmail.com </a>
+      </p>
+      <p>
+        <Tag label="Github" type="primary" />
+        <a href="https://github.com/KimWash"> https://github.com/KimWash </a>
       </p>
     </div>
   </div>

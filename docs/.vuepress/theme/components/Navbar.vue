@@ -1,29 +1,51 @@
 <template>
   <b-navbar>
     <template #brand>
-      <b-navbar-item
-        tag="router-link"
-        :to="{ path: '/' }"
-        style="font-weight: bold; color: black"
-      >
+      <b-navbar-item href="/" style="font-weight: bold; color: black">
         Wh@t !s Development?
       </b-navbar-item>
     </template>
-
-
     <template #end>
-            <b-navbar-item
+      <b-navbar-item
         v-for="item in navigations"
         :href="item.route"
         :key="item.text"
       >
         {{ item.text }}
       </b-navbar-item>
+      <b-navbar-item
+        v-for="item in categories"
+        :href="item.type == 'link' ? item.value : `/posts/${item.id}`"
+        :key="item.name"
+      >
+        {{ item.name }}
+      </b-navbar-item>
       <b-navbar-item tag="div">
         <div class="buttons">
-          <b-button type="is-info" icon-right="github" icon-pack="fab" @click="openThirdLink('https://github.com/KimWash/')"/>
-          <b-button type="is-info" icon-right="instagram" icon-pack="fab" @click="openThirdLink('https://instagram.com/kimwash.jem/')"/>
-        
+          <b-button
+            type="is-info"
+            icon-right="github"
+            icon-pack="fab"
+            @click="openThirdLink('https://github.com/KimWash/')"
+          />
+          <b-button
+            type="is-info"
+            icon-right="instagram"
+            icon-pack="fab"
+            @click="openThirdLink('https://instagram.com/03_gangm/')"
+          />
+          <b-button
+            type="is-info"
+            @click="
+              openThirdLink(
+                'https://kimwash.notion.site/40487aa4fb564b389b0d455c5aec1efa'
+              )
+            "
+          >
+            <span class="icon is-small">
+              <img src="/images/white_notion.svg" width="15" height="15" />
+            </span>
+          </b-button>
         </div>
       </b-navbar-item>
     </template>
@@ -31,10 +53,12 @@
 </template>
 <script>
 import navigations from "../../navigations.json";
+import categories from "../../categories.json";
 export default {
   data() {
     return {
       navigations: navigations,
+      categories: categories,
     };
   },
   created() {
@@ -42,8 +66,8 @@ export default {
   },
   methods: {
     openThirdLink(url) {
-      location.href = url
-    }
-  }
+      location.href = url;
+    },
+  },
 };
 </script>

@@ -1,27 +1,39 @@
-name: vuepress deploy
-
-on:
-  push:
-    branches: [ master ]
-
+name: Build and Deploy
+on: [push]
+env:
+  INSTAGRAM_USERNAME: ${{ secrets.INSTAGRAM_USERNAME }}
+  INSTAGRAM_PASSWORD: ${{ secrets.INSTAGRAM_PASSWORD }}
+  REPO_PATH: ${{ secrets.REPO_PATH }}
+  GITHUB_USERNAME: ${{ secrets.GH_USERNAME }}
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  GITHUB_REPOSITORY: ${{ secrets.GH_REPOSITORY }}
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: Install and build
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Deploy Build Files
+      uses: jenkey2011/vuepress-deploy@1.0.1
+      env:
+        ACCESS_TOKEN: ${{ secrets.TOKEN }}
+        BUILD_SCRIPT: npm i --save && npm run docs:build
+        TARGET_BRANCH: gh-pages
+        BUILD_DIR: docs/.vuepress/dist
+    - uses: robinraju/release-downloader@v1.4
+      with:
+        latest: true
+        fileName: "*.jar"
+        tarBall: false
+        zipBall: false
+        repository: "KimWash/instagram_uploader"
+        token: "${{ secrets.GH_TOKEN }}"
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'zulu'
+        java-version: '11'
+    - name: Run jar
       run: |
-        npm install
-        npm run docs:build
-    - name: Deploy built filed
-      env: 
-        TOKEN: ${{ secrets.TOKEN }}
-      run: |
-        cd docs/.vuepress/dist
-        git config --global user.email "ckm0728wash@gmail.com"
-        git config --global user.name "KimWash"
-        git init
-        git add -A
-        git commit -m "deploy"
-        https://${TOKEN}@github.com/KimWash/kimwash.github.io.git master:gh-pages
+        ARTIFACT=$(find -type f -name "**.jar")
+        java -jar $ARTIFACT

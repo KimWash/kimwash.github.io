@@ -1,47 +1,52 @@
 <template>
-    <div class="page post">
-        <div class="columns">
-            <div class="column">
-                <p class="title is-4">{{$page.frontmatter.title}}</p>
-            </div>
-            <div class="column is-2">
-                <p class="subtitle is-5 date">{{$page.frontmatter.date}}</p>
-            </div>
-        </div>
-        <Content style="paddig:0"/>
-        <Disqus class="comment"/>
+  <div class="page post">
+    <div class="columns">
+      <div class="column">
+        <p class="title is-4">{{ $page.frontmatter.title }}</p>
+      </div>
+      <div class="column is-2">
+        <p class="subtitle is-5 date">{{ $page.frontmatter.date }}</p>
+      </div>
     </div>
+    <Content style="paddig: 0" />
+    <Disqus class="comment" />
+  </div>
 </template>
 <script>
-import Disqus from "./Disqus.vue"
+import Disqus from "./Disqus.vue";
 export default {
-    components: {
-        Disqus
-    },
-    created() {
-        console.log(this.$page)
-    }
-}
+  components: {
+    Disqus,
+  },
+};
 </script>
 <style>
 .subtitle.is-5.date {
-    text-align: right;
+  text-align: right;
 }
-@media screen and (min-width:1024px) {
-    .post {
-        padding: 0 10vw;
-    }
+@media screen and (min-width: 1024px) {
+  .post {
+    padding: 0 18vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .post {
+    padding: 0 10px;
+  }
 }
 .post {
-    margin-top:5vh
+  margin-top: 5vh;
 }
 .comment {
-    margin-top:20vh
+  margin-top: 20vh;
 }
-</style>
-<style scoped>
-.token.number {
-    font-size: 0.8rem !important;
-    padding:0 !important;
+.label {
+  display: inline;
+}
+code {
+  font-family: "Spoqa Han Sans Neo";
+}
+.number {
+  all: unset;
 }
 </style>
