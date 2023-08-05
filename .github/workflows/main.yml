@@ -41,5 +41,5 @@ jobs:
 
       - name: Run jar
         run: |
-          ARTIFACT=$(find download -type f -name "**.jar")
+          ARTIFACT=$(find -type f -name "**.jar")
           java -jar $ARTIFACT
