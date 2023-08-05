@@ -1,5 +1,12 @@
 name: Build and Deploy
 on: [push]
+env:
+  INSTARGRAM_USERNAME: ${{ secrets.INSTARGRAM_USERNAME }}
+  INSTARGRAM_PASSWORD: ${{ secrets.INSTARGRAM_PASSWORD }}
+  REPO_PATH: ${{ secrets.REPO_PATH }}
+  GITHUB_USERNAME: ${{ secrets.GH_USERNAME }}
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  GITHUB_REPOSITORY: ${{ secrets.GH_REPOSITORY }}
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -14,3 +21,25 @@ jobs:
         BUILD_SCRIPT: npm i --save && npm run docs:build
         TARGET_BRANCH: gh-pages
         BUILD_DIR: docs/.vuepress/dist
+  gradle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - uses: robinraju/release-downloader@v1.4
+        with:
+          latest: true
+          fileName: "*.jar"
+          tarBall: false
+          zipBall: false
+          out-file-path: "${{ github.workspace }}/download/"
+          token: "${{ secrets.GH_TOKEN }}"
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+
+      - name: Run jar
+        run: |
+          ARTIFACT=$(find download -type f -name "**.jar")
+          java -jar $ARTIFACT
