@@ -20,6 +20,11 @@
     "type": "personal"
   },
   {
+    "id": "react",
+    "name": "React",
+    "type": "react"
+  },
+  {
     "id": "etc",
     "name": "그 외",
     "type": "personal"

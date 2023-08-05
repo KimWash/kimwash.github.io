@@ -3,7 +3,7 @@
     <div class="img">
       <img
         class="img-round"
-        src="../../images/profile2.jpeg"
+        src="https://github.com/KimWash.png"
         width="200"
         height="200"
       />
