@@ -17,14 +17,13 @@ meta:
 <p> <Tag label="Level 3" type="success"/> 많이 사용해봐서 자신있어요</p>
 
 ### Frontend
+<Stack name="JS" level="3" />
+<Stack name="React" level="3" />
 <Stack name="Vue.js" level="2" />
-<Stack name="React" level="2" />
-<Stack name="React Native" level="2" />
 <Stack name="HTML/CSS" level="2" />
-<Stack name="JS" level="2" />
 <Stack name="TS" level="2" />
 <Stack name="JQuery" level="2" />
-<Stack name="Buefy" level="3" />
+<Stack name="Buefy" level="1" />
 
 
 ### Backend
@@ -32,8 +31,9 @@ meta:
 <Stack name="Spring Boot" level="1"  />
 
 ### App
-<Stack name="Flutter" level="2" />
+<Stack name="React Native" level="2" />
 <Stack name="Kotlin" level="2" />
+<Stack name="Flutter" level="1" />
 
 ## Projects
 <table>

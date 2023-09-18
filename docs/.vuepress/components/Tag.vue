@@ -1,9 +1,11 @@
 <template>
-  <div :class="`tag is-${type}`">{{ label }}</div>
+  <div :class="`tag is-${type}`" :style="`${full ? 'width: 100%' : ''}`">
+    {{ label }}
+  </div>
 </template>
 <script>
 export default {
-  props: ["label", "type"],
+  props: ["label", "type", "full"],
 };
 </script>
 <style>
