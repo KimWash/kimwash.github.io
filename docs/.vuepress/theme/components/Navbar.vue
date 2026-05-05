@@ -14,7 +14,8 @@
     <template #end>
             <b-navbar-item
         v-for="item in navigations"
-        :href="item.route"
+        tag="router-link"
+        :to="item.route"
         :key="item.text"
       >
         {{ item.text }}
@@ -38,11 +39,10 @@ export default {
     };
   },
   created() {
-    console.log(this.navigations);
   },
   methods: {
     openThirdLink(url) {
-      location.href = url
+      window.open(url, '_blank')
     }
   }
 };

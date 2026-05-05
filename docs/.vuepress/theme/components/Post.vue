@@ -19,7 +19,6 @@ export default {
         Disqus
     },
     created() {
-        console.log(this.$page)
     }
 }
 </script>

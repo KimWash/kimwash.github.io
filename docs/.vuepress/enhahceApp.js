@@ -4,17 +4,22 @@ export default ({
   router, // the router instance for the app
   // siteData // site metadata
 }) => {
-  // ...apply enhancements to the app
+  // Restore saved scroll position when navigating back/forward,
+  // otherwise scroll to the top of the page.
+  router.options.scrollBehavior = (to, from, savedPosition) => {
+    if (savedPosition) {
+      return savedPosition
+    }
+    return { x: 0, y: 0 }
+  }
+
   router.afterEach((to, from) => {
     if (from.path !== to.path) {
       if (typeof window !== 'undefined' && window.DISQUS) {
         setTimeout(() => {
-          console.log('DISQUS is exists and try to load!')
           window.DISQUS.reset({ reload: true })
         }, 0)
       }
-    } else {
-      // same page but hash changed
     }
   })
 }

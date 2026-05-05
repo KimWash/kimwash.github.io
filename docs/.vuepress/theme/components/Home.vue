@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="nopost">아무런 글도 없는 것 같네요.</div>
+    <div class="nopost" v-if="posts.posts.length === 0">아무런 글도 없는 것 같네요.</div>
   </div>
 </template>
 
